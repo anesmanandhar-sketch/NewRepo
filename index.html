@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for.">
+  <title>Google</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔍</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    
+    <!-- ================= HOME VIEW ================= -->
+    <div id="view-home" class="view-state">
+      <header class="home-header">
+        <div class="header-left">
+          <a href="#" class="header-link" onclick="return false;">About</a>
+          <a href="#" class="header-link" onclick="return false;">Store</a>
+        </div>
+        <div class="header-right">
+          <a href="#" class="header-link" onclick="return false;">Gmail</a>
+          <a href="#" class="header-link" onclick="return false;">Images</a>
+          
+          <!-- Theme Toggle -->
+          <button class="btn-icon theme-toggle" id="theme-toggle-home" aria-label="Toggle Theme">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+            </svg>
+          </button>
+          
+          <!-- Apps Icon -->
+          <button class="btn-icon" id="apps-btn-home" aria-label="Google Apps">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+          
+          <!-- Profile -->
+          <div class="avatar" id="avatar-home">A</div>
+        </div>
+      </header>
+
+      <main class="home-container">
+        <!-- Google Multi-Colored Logo -->
+        <div class="logo-container">
+          <span class="logo-g1">G</span>
+          <span class="logo-o1">o</span>
+          <span class="logo-o2">o</span>
+          <span class="logo-g2">g</span>
+          <span class="logo-l">l</span>
+          <span class="logo-e">e</span>
+        </div>
+
+        <!-- Search Bar -->
+        <form id="home-search-form" class="search-wrapper">
+          <div class="search-box-container">
+            <span class="search-icon-left">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+              </svg>
+            </span>
+            <input type="text" id="home-search-input" class="search-input" autocomplete="off" placeholder="Search Google or type a URL" aria-label="Search">
+            <div class="search-utils">
+              <!-- Mic Icon -->
+              <button type="button" class="search-util-btn" aria-label="Search by voice">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path>
+                </svg>
+              </button>
+              <!-- Camera Icon -->
+              <button type="button" class="search-util-btn" aria-label="Search by image">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          
+          <!-- Dropdown Suggestions -->
+          <div id="home-suggestions" class="suggestions-dropdown"></div>
+        </form>
+
+        <div class="home-buttons">
+          <button type="submit" id="btn-search-main" class="btn-primary">Google Search</button>
+          <button type="button" id="btn-lucky-main" class="btn-primary">I'm Feeling Lucky</button>
+        </div>
+
+        <div class="language-promo">
+          Google offered in: <a href="#" onclick="return false;">नेपाली</a>
+        </div>
+      </main>
+
+      <!-- Footer for Home -->
+      <footer>
+        <div class="footer-location">Nepal</div>
+        <div class="footer-links-container">
+          <div class="footer-section">
+            <a href="#" class="footer-link" onclick="return false;">About</a>
+            <a href="#" class="footer-link" onclick="return false;">Advertising</a>
+            <a href="#" class="footer-link" onclick="return false;">Business</a>
+            <a href="#" class="footer-link" onclick="return false;">How Search works</a>
+          </div>
+          <div class="footer-section">
+            <a href="#" class="footer-link" onclick="return false;">Privacy</a>
+            <a href="#" class="footer-link" onclick="return false;">Terms</a>
+            <a href="#" class="footer-link" onclick="return false;">Settings</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+
+    <!-- ================= RESULTS VIEW ================= -->
+    <div id="view-results" class="view-state hidden">
+      <header class="results-header">
+        <span class="logo-container results-logo" id="logo-back-home" aria-label="Go home">
+          <span class="logo-g1">G</span>
+          <span class="logo-o1">o</span>
+          <span class="logo-o2">o</span>
+          <span class="logo-g2">g</span>
+          <span class="logo-l">l</span>
+          <span class="logo-e">e</span>
+        </span>
+
+        <form id="results-search-form" class="results-search-wrapper">
+          <div class="search-box-container">
+            <input type="text" id="results-search-input" class="search-input" autocomplete="off" aria-label="Search query">
+            <div class="search-utils">
+              <!-- Mic -->
+              <button type="button" class="search-util-btn" aria-label="Search by voice">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path>
+                </svg>
+              </button>
+              <!-- Camera -->
+              <button type="button" class="search-util-btn" aria-label="Search by image">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+              </button>
+              <!-- Search Submit -->
+              <button type="submit" class="search-util-btn" id="btn-submit-results" aria-label="Search button">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          
+          <div id="results-suggestions" class="suggestions-dropdown"></div>
+        </form>
+
+        <div class="header-right">
+          <!-- Theme Toggle -->
+          <button class="btn-icon theme-toggle" id="theme-toggle-results" aria-label="Toggle Theme">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+            </svg>
+          </button>
+          
+          <!-- Apps Icon -->
+          <button class="btn-icon" id="apps-btn-results" aria-label="Google Apps">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+          
+          <div class="avatar" id="avatar-results">A</div>
+        </div>
+      </header>
+
+      <!-- Sub Navigation Tabs (All, Images, News) -->
+      <nav class="results-sub-nav">
+        <div class="sub-nav-item active" data-tab="all">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+          All
+        </div>
+        <div class="sub-nav-item" data-tab="images">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+          </svg>
+          Images
+        </div>
+        <div class="sub-nav-item" data-tab="news">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 4a2 2 0 00-2-2m-2 9a2 2 0 01-2-2v-3m-6 0h.01m-.01-4h.01m-.01-4h.01M9 16h3m-3-4h3m-3-4h3"></path>
+          </svg>
+          News
+        </div>
+      </nav>
+
+      <!-- Main Results Content Grid -->
+      <main class="results-main">
+        <div class="results-col-left" id="search-results-area">
+          <!-- Injected dynamically by app.js -->
+        </div>
+
+        <div class="results-col-right" id="knowledge-panel-area">
+          <!-- Injected dynamically by app.js -->
+        </div>
+      </main>
+
+      <!-- Footer for Results -->
+      <footer>
+        <div class="footer-links-container">
+          <div class="footer-section">
+            <a href="#" class="footer-link" onclick="return false;">Help</a>
+            <a href="#" class="footer-link" onclick="return false;">Send feedback</a>
+            <a href="#" class="footer-link" onclick="return false;">Privacy</a>
+            <a href="#" class="footer-link" onclick="return false;">Terms</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
