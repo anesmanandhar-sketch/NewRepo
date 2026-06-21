@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap');
 
 /* Color & Theme Definitions */
 :root {
@@ -87,7 +87,7 @@ body {
 
 /* Typography elements */
 h1, h2, h3 {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Orbitron', sans-serif;
 }
 
 a {
@@ -215,56 +215,89 @@ header.home-header {
   display: flex;
   font-size: 5rem;
   font-weight: 800;
-  letter-spacing: -3px;
+  letter-spacing: 1px;
   margin-bottom: 2.25rem;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   user-select: none;
   filter: drop-shadow(0 4px 15px rgba(0,0,0,0.1));
 }
 
 /* Base style for RGB flow inside characters */
 .logo-container span {
-  background: linear-gradient(
-    90deg,
-    #ff2a5f,
-    #ff7e40,
-    #ffdb15,
-    #05d550,
-    #00b2fe,
-    #7a00ff,
-    #ff2a5f
-  );
-  background-size: 600% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  animation: rgb-flow 8s linear infinite;
   display: inline-block;
   transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.3s ease;
 }
 
-/* Stagger start position for smooth wave flow across characters */
-.logo-container .logo-g1 { animation-delay: 0s; }
-.logo-container .logo-o1 { animation-delay: -1.33s; }
-.logo-container .logo-o2 { animation-delay: -2.66s; }
-.logo-container .logo-g2 { animation-delay: -4s; }
-.logo-container .logo-l  { animation-delay: -5.33s; }
-.logo-container .logo-e  { animation-delay: -6.66s; }
+/* Individual letter custom glow animations for Diwali lights */
+.logo-container .logo-g1 { 
+  color: #3b82f6; 
+  animation: glow-g1 1.5s infinite alternate ease-in-out, diwali-flicker 4s infinite; 
+}
+.logo-container .logo-o1 { 
+  color: #ef4444; 
+  animation: glow-o1 1.8s infinite alternate ease-in-out, diwali-flicker 3.7s infinite; 
+}
+.logo-container .logo-o2 { 
+  color: #f59e0b; 
+  animation: glow-o2 1.4s infinite alternate ease-in-out, diwali-flicker 4.2s infinite; 
+}
+.logo-container .logo-g2 { 
+  color: #3b82f6; 
+  animation: glow-g2 1.6s infinite alternate ease-in-out, diwali-flicker 3.9s infinite; 
+}
+.logo-container .logo-l  { 
+  color: #10b981; 
+  animation: glow-l  1.7s infinite alternate ease-in-out, diwali-flicker 4.1s infinite; 
+}
+.logo-container .logo-e  { 
+  color: #ef4444; 
+  animation: glow-e  1.5s infinite alternate ease-in-out, diwali-flicker 3.8s infinite; 
+}
 
-@keyframes rgb-flow {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 600% 50%;
-  }
+/* Twinkling lights keyframes */
+@keyframes glow-g1 {
+  0%, 100% { text-shadow: 0 0 6px #3b82f6, 0 0 15px rgba(59, 130, 246, 0.6), 0 0 30px rgba(59, 130, 246, 0.3); }
+  50% { text-shadow: 0 0 14px #3b82f6, 0 0 28px rgba(59, 130, 246, 0.8), 0 0 45px rgba(59, 130, 246, 0.5); }
+}
+@keyframes glow-o1 {
+  0%, 100% { text-shadow: 0 0 6px #ef4444, 0 0 15px rgba(239, 68, 68, 0.6), 0 0 30px rgba(239, 68, 68, 0.3); }
+  50% { text-shadow: 0 0 14px #ef4444, 0 0 28px rgba(239, 68, 68, 0.8), 0 0 45px rgba(239, 68, 68, 0.5); }
+}
+@keyframes glow-o2 {
+  0%, 100% { text-shadow: 0 0 6px #f59e0b, 0 0 15px rgba(245, 158, 11, 0.6), 0 0 30px rgba(245, 158, 11, 0.3); }
+  50% { text-shadow: 0 0 14px #f59e0b, 0 0 28px rgba(245, 158, 11, 0.8), 0 0 45px rgba(245, 158, 11, 0.5); }
+}
+@keyframes glow-g2 {
+  0%, 100% { text-shadow: 0 0 6px #3b82f6, 0 0 15px rgba(59, 130, 246, 0.6), 0 0 30px rgba(59, 130, 246, 0.3); }
+  50% { text-shadow: 0 0 14px #3b82f6, 0 0 28px rgba(59, 130, 246, 0.8), 0 0 45px rgba(59, 130, 246, 0.5); }
+}
+@keyframes glow-l {
+  0%, 100% { text-shadow: 0 0 6px #10b981, 0 0 15px rgba(16, 185, 129, 0.6), 0 0 30px rgba(16, 185, 129, 0.3); }
+  50% { text-shadow: 0 0 14px #10b981, 0 0 28px rgba(16, 185, 129, 0.8), 0 0 45px rgba(16, 185, 129, 0.5); }
+}
+@keyframes glow-e {
+  0%, 100% { text-shadow: 0 0 6px #ef4444, 0 0 15px rgba(239, 68, 68, 0.6), 0 0 30px rgba(239, 68, 68, 0.3); }
+  50% { text-shadow: 0 0 14px #ef4444, 0 0 28px rgba(239, 68, 68, 0.8), 0 0 45px rgba(239, 68, 68, 0.5); }
+}
+
+/* Subtle random flickering to mimic lamp flame / fairy lights */
+@keyframes diwali-flicker {
+  0%, 100% { opacity: 0.98; }
+  23% { opacity: 0.98; }
+  24% { opacity: 0.91; }
+  26% { opacity: 0.98; }
+  70% { opacity: 0.98; }
+  71% { opacity: 0.93; }
+  72% { opacity: 0.98; }
+  90% { opacity: 0.98; }
+  91% { opacity: 0.89; }
+  93% { opacity: 0.98; }
 }
 
 /* Modern hover effects */
 .logo-container span:hover {
   transform: translateY(-8px) scale(1.08);
-  filter: drop-shadow(0 8px 16px rgba(var(--text-primary), 0.15));
+  filter: drop-shadow(0 8px 20px currentColor);
 }
 
 /* Custom search style branding logo */
