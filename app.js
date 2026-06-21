@@ -261,6 +261,8 @@ document.addEventListener("DOMContentLoaded", () => {
   setupTheme();
   setupEventListeners();
   setupAutofocus();
+  setupFallingStars();
+  setupFloatingSignIn();
 });
 
 // Setup Dark/Light Theme System
@@ -733,4 +735,74 @@ function generateFallbackData(query) {
       { title: `Why everyone is talking about ${capitalized} right now`, source: "TechCrunch", date: "3 hours ago", snippet: `A look at recent trends, business innovations, and investment opportunities related to ${capitalized} in 2026.` }
     ]
   };
+}
+
+// Background Falling Stars / Diwali Sparks Generator
+function setupFallingStars() {
+  const container = document.createElement("div");
+  container.className = "stars-container";
+  document.body.appendChild(container);
+
+  // Helper to spawn a single shooting star
+  function spawnStar() {
+    const star = document.createElement("div");
+    star.className = "falling-star";
+    
+    // Set random start positions (top and left area of viewport)
+    const leftPos = Math.random() * 80; // 0vw to 80vw
+    const topPos = Math.random() * -100; // -100px to 0px
+    star.style.left = `${leftPos}vw`;
+    star.style.top = `${topPos}px`;
+    
+    // Random shooting star line length
+    const starLength = Math.random() * 120 + 80; // 80px to 200px
+    star.style.width = `${starLength}px`;
+    
+    // Speed: fast shooting stars (1.0s to 2.2s)
+    const duration = Math.random() * 1.2 + 1.0;
+    star.style.animationDuration = `${duration}s`;
+    
+    // Pass custom shooting distance to the animation
+    const travelDistance = Math.random() * 600 + 400; // 400px to 1000px travel distance
+    star.style.setProperty("--travel-dist", `${travelDistance}px`);
+    
+    container.appendChild(star);
+    
+    // Remove element from DOM once animation ends
+    setTimeout(() => {
+      star.remove();
+    }, duration * 1000);
+  }
+
+  // Initial population of stars
+  for (let i = 0; i < 4; i++) {
+    // Stagger initial creation
+    setTimeout(() => {
+      spawnStar();
+    }, Math.random() * 6000);
+  }
+
+  // Periodic spawning (harmonious shooting star rhythm)
+  setInterval(spawnStar, 1800);
+}
+
+// Toggle floating sign-in card
+function setupFloatingSignIn() {
+  const btn = document.getElementById("btn-floating-signin");
+  const card = document.getElementById("signin-popup-card");
+  
+  if (btn && card) {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      card.classList.toggle("hidden");
+    });
+    
+    card.addEventListener("click", (e) => {
+      e.stopPropagation();
+    });
+    
+    document.addEventListener("click", () => {
+      card.classList.add("hidden");
+    });
+  }
 }

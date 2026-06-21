@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Italiana&display=swap');
 
 /* Color & Theme Definitions */
 :root {
@@ -87,7 +87,7 @@ body {
 
 /* Typography elements */
 h1, h2, h3 {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Italiana', serif;
 }
 
 a {
@@ -111,6 +111,7 @@ a:hover {
   min-height: 100vh;
   width: 100%;
   position: relative;
+  z-index: 1;
 }
 
 /* --- HOME STATE --- */
@@ -213,13 +214,13 @@ header.home-header {
 /* Google Sleek Logo */
 .logo-container {
   display: flex;
-  font-size: 5rem;
-  font-weight: 800;
-  letter-spacing: 1px;
+  font-size: 5.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
   margin-bottom: 2.25rem;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Italiana', serif;
   user-select: none;
-  filter: drop-shadow(0 4px 15px rgba(0,0,0,0.1));
+  filter: drop-shadow(0 4px 15px rgba(0,0,0,0.08));
 }
 
 /* Base style for RGB flow inside characters */
@@ -228,56 +229,56 @@ header.home-header {
   transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.3s ease;
 }
 
-/* Individual letter custom glow animations for Diwali lights */
+/* Individual letter custom glow animations for Italian Aurora */
 .logo-container .logo-g1 { 
-  color: #3b82f6; 
+  color: #ffb7c5; 
   animation: glow-g1 1.5s infinite alternate ease-in-out, diwali-flicker 4s infinite; 
 }
 .logo-container .logo-o1 { 
-  color: #ef4444; 
+  color: #ffb347; 
   animation: glow-o1 1.8s infinite alternate ease-in-out, diwali-flicker 3.7s infinite; 
 }
 .logo-container .logo-o2 { 
-  color: #f59e0b; 
+  color: #ffd700; 
   animation: glow-o2 1.4s infinite alternate ease-in-out, diwali-flicker 4.2s infinite; 
 }
 .logo-container .logo-g2 { 
-  color: #3b82f6; 
+  color: #e0b0ff; 
   animation: glow-g2 1.6s infinite alternate ease-in-out, diwali-flicker 3.9s infinite; 
 }
 .logo-container .logo-l  { 
-  color: #10b981; 
+  color: #b19cd9; 
   animation: glow-l  1.7s infinite alternate ease-in-out, diwali-flicker 4.1s infinite; 
 }
 .logo-container .logo-e  { 
-  color: #ef4444; 
+  color: #ffb7c5; 
   animation: glow-e  1.5s infinite alternate ease-in-out, diwali-flicker 3.8s infinite; 
 }
 
-/* Twinkling lights keyframes */
+/* Twinkling Italian Aurora lights keyframes */
 @keyframes glow-g1 {
-  0%, 100% { text-shadow: 0 0 6px #3b82f6, 0 0 15px rgba(59, 130, 246, 0.6), 0 0 30px rgba(59, 130, 246, 0.3); }
-  50% { text-shadow: 0 0 14px #3b82f6, 0 0 28px rgba(59, 130, 246, 0.8), 0 0 45px rgba(59, 130, 246, 0.5); }
+  0%, 100% { text-shadow: 0 0 6px #ffb7c5, 0 0 15px rgba(255, 183, 197, 0.5), 0 0 30px rgba(255, 183, 197, 0.2); }
+  50% { text-shadow: 0 0 14px #ffb7c5, 0 0 28px rgba(255, 183, 197, 0.7), 0 0 45px rgba(255, 183, 197, 0.4); }
 }
 @keyframes glow-o1 {
-  0%, 100% { text-shadow: 0 0 6px #ef4444, 0 0 15px rgba(239, 68, 68, 0.6), 0 0 30px rgba(239, 68, 68, 0.3); }
-  50% { text-shadow: 0 0 14px #ef4444, 0 0 28px rgba(239, 68, 68, 0.8), 0 0 45px rgba(239, 68, 68, 0.5); }
+  0%, 100% { text-shadow: 0 0 6px #ffb347, 0 0 15px rgba(255, 179, 71, 0.5), 0 0 30px rgba(255, 179, 71, 0.2); }
+  50% { text-shadow: 0 0 14px #ffb347, 0 0 28px rgba(255, 179, 71, 0.7), 0 0 45px rgba(255, 179, 71, 0.4); }
 }
 @keyframes glow-o2 {
-  0%, 100% { text-shadow: 0 0 6px #f59e0b, 0 0 15px rgba(245, 158, 11, 0.6), 0 0 30px rgba(245, 158, 11, 0.3); }
-  50% { text-shadow: 0 0 14px #f59e0b, 0 0 28px rgba(245, 158, 11, 0.8), 0 0 45px rgba(245, 158, 11, 0.5); }
+  0%, 100% { text-shadow: 0 0 6px #ffd700, 0 0 15px rgba(255, 215, 0, 0.5), 0 0 30px rgba(255, 215, 0, 0.2); }
+  50% { text-shadow: 0 0 14px #ffd700, 0 0 28px rgba(255, 215, 0, 0.7), 0 0 45px rgba(255, 215, 0, 0.4); }
 }
 @keyframes glow-g2 {
-  0%, 100% { text-shadow: 0 0 6px #3b82f6, 0 0 15px rgba(59, 130, 246, 0.6), 0 0 30px rgba(59, 130, 246, 0.3); }
-  50% { text-shadow: 0 0 14px #3b82f6, 0 0 28px rgba(59, 130, 246, 0.8), 0 0 45px rgba(59, 130, 246, 0.5); }
+  0%, 100% { text-shadow: 0 0 6px #e0b0ff, 0 0 15px rgba(224, 176, 255, 0.5), 0 0 30px rgba(224, 176, 255, 0.2); }
+  50% { text-shadow: 0 0 14px #e0b0ff, 0 0 28px rgba(224, 176, 255, 0.7), 0 0 45px rgba(224, 176, 255, 0.4); }
 }
 @keyframes glow-l {
-  0%, 100% { text-shadow: 0 0 6px #10b981, 0 0 15px rgba(16, 185, 129, 0.6), 0 0 30px rgba(16, 185, 129, 0.3); }
-  50% { text-shadow: 0 0 14px #10b981, 0 0 28px rgba(16, 185, 129, 0.8), 0 0 45px rgba(16, 185, 129, 0.5); }
+  0%, 100% { text-shadow: 0 0 6px #b19cd9, 0 0 15px rgba(177, 156, 217, 0.5), 0 0 30px rgba(177, 156, 217, 0.2); }
+  50% { text-shadow: 0 0 14px #b19cd9, 0 0 28px rgba(177, 156, 217, 0.7), 0 0 45px rgba(177, 156, 217, 0.4); }
 }
 @keyframes glow-e {
-  0%, 100% { text-shadow: 0 0 6px #ef4444, 0 0 15px rgba(239, 68, 68, 0.6), 0 0 30px rgba(239, 68, 68, 0.3); }
-  50% { text-shadow: 0 0 14px #ef4444, 0 0 28px rgba(239, 68, 68, 0.8), 0 0 45px rgba(239, 68, 68, 0.5); }
+  0%, 100% { text-shadow: 0 0 6px #ffb7c5, 0 0 15px rgba(255, 183, 197, 0.5), 0 0 30px rgba(255, 183, 197, 0.2); }
+  50% { text-shadow: 0 0 14px #ffb7c5, 0 0 28px rgba(255, 183, 197, 0.7), 0 0 45px rgba(255, 183, 197, 0.4); }
 }
 
 /* Subtle random flickering to mimic lamp flame / fairy lights */
@@ -816,4 +817,286 @@ footer {
 
 .upside-down {
   transform: rotate(180deg);
+}
+
+/* Background falling stars container */
+.stars-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.falling-star {
+  position: absolute;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+  transform-origin: left center;
+  transform: rotate(-45deg);
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  animation: shoot-star linear forwards;
+}
+
+.falling-star::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -2px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 0 8px #ffffff, 
+              0 0 16px #ffd700, 
+              0 0 24px #ffaa00;
+}
+
+[data-theme="light"] .falling-star {
+  background: linear-gradient(90deg, rgba(255, 170, 0, 0) 0%, rgba(255, 170, 0, 1) 100%);
+}
+[data-theme="light"] .falling-star::after {
+  background: #ffffff;
+  box-shadow: 0 0 8px #ffffff, 
+              0 0 16px #ffd700, 
+              0 0 24px #ff8f00;
+}
+
+[data-theme="dark"] .falling-star {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+}
+[data-theme="dark"] .falling-star::after {
+  background: #ffffff;
+  box-shadow: 0 0 10px #ffffff, 
+              0 0 20px #f59e0b, 
+              0 0 30px rgba(255, 255, 255, 0.6);
+}
+
+/* Diagonal shooting star animation */
+@keyframes shoot-star {
+  0% {
+    transform: rotate(-45deg) translateX(0) scale(0.6);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-45deg) translateX(var(--travel-dist, 600px)) scale(1.15);
+    opacity: 0;
+  }
+}
+
+/* Floating Sign In Button (Bottom Left) */
+.floating-signin-container {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 1000;
+  font-family: 'Inter', sans-serif;
+  animation: tornado-leaf 28s infinite ease-in-out;
+  transition: transform 0.5s ease;
+}
+
+.btn-floating-signin {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  background: linear-gradient(135deg, #ff0055, #ff5e00, #7a00ff);
+  background-size: 200% auto;
+  border: none;
+  border-radius: 30px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 0, 85, 0.4), 0 8px 25px rgba(122, 0, 255, 0.25);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  letter-spacing: 0.5px;
+  animation: shine-button 4s ease infinite;
+}
+
+/* Bright glow overlay on hover */
+.btn-floating-signin::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: -1;
+  background: linear-gradient(90deg, #ff2a5f, #ff7e40, #ffd700, #e0b0ff, #b19cd9, #ff2a5f);
+  background-size: 400% 100%;
+  border-radius: 32px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  animation: aurora-border-flow 6s linear infinite;
+}
+
+@keyframes shine-button {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes aurora-border-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 400% 50%;
+  }
+}
+
+.btn-floating-signin:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(255, 0, 85, 0.6), 0 12px 35px rgba(122, 0, 255, 0.4);
+}
+
+.btn-floating-signin:hover::after {
+  opacity: 0.85;
+}
+
+.signin-icon {
+  width: 18px;
+  height: 18px;
+  color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.btn-floating-signin:hover .signin-icon {
+  transform: translateX(-2px);
+}
+
+/* Glassmorphic Sign In Card */
+.signin-popup-card {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  width: 320px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 1001;
+  animation: cardSlideIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes cardSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.signin-popup-card.hidden {
+  display: none !important;
+}
+
+.card-header h3 {
+  font-family: 'Italiana', serif;
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+  color: var(--text-primary);
+}
+
+.card-header p {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.card-form .form-group {
+  margin-bottom: 12px;
+}
+
+.card-form input {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.card-form input:focus {
+  border-color: var(--accent-blue);
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.card-actions a {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.btn-card-submit {
+  background: var(--accent-blue);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-card-submit:hover {
+  background-color: var(--accent-blue-hover);
+}
+
+@keyframes tornado-leaf {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  12.5% {
+    transform: translate(15vw, -15vh) rotate(45deg);
+  }
+  25% {
+    transform: translate(60vw, -30vh) rotate(90deg);
+  }
+  37.5% {
+    transform: translate(35vw, -65vh) rotate(135deg);
+  }
+  50% {
+    transform: translate(8vw, -45vh) rotate(180deg);
+  }
+  62.5% {
+    transform: translate(65vw, -10vh) rotate(225deg);
+  }
+  75% {
+    transform: translate(25vw, -25vh) rotate(270deg);
+  }
+  87.5% {
+    transform: translate(50vw, -55vh) rotate(315deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
 }
