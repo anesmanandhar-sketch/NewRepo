@@ -520,6 +520,13 @@ function performSearch(query) {
 
   state.currentQuery = cleaned;
   
+  // Easter egg: if query is "hello", flip the site upside down (toggle)
+  if (cleaned.toLowerCase() === "hello") {
+    document.body.classList.toggle("upside-down");
+  } else {
+    document.body.classList.remove("upside-down");
+  }
+
   // Transition home container away, open results page
   document.getElementById("view-home").classList.add("hidden");
   document.getElementById("view-results").classList.remove("hidden");
@@ -535,6 +542,9 @@ function performSearch(query) {
 function goBackHome() {
   state.currentQuery = "";
   state.activeTab = "all";
+  
+  // Remove easter egg if going back home
+  document.body.classList.remove("upside-down");
   
   // Transition tabs back to default "all"
   document.querySelectorAll(".sub-nav-item").forEach(el => el.classList.remove("active"));

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
 /* Color & Theme Definitions */
 :root {
@@ -63,7 +63,7 @@ body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   line-height: 1.5;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 1s ease-in-out;
   overflow-x: hidden;
   min-height: 100vh;
   display: flex;
@@ -87,7 +87,7 @@ body {
 
 /* Typography elements */
 h1, h2, h3 {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 a {
@@ -215,23 +215,61 @@ header.home-header {
   display: flex;
   font-size: 5rem;
   font-weight: 800;
-  letter-spacing: -2px;
+  letter-spacing: -3px;
   margin-bottom: 2.25rem;
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   user-select: none;
-  filter: drop-shadow(var(--logo-shadow));
+  filter: drop-shadow(0 4px 15px rgba(0,0,0,0.1));
 }
 
-.logo-g1 { color: #1a73e8; }
-.logo-o1 { color: #ea4335; }
-.logo-o2 { color: #fbbc05; }
-.logo-g2 { color: #1a73e8; }
-.logo-l  { color: #34a853; }
-.logo-e  { color: #ea4335; }
+/* Base style for RGB flow inside characters */
+.logo-container span {
+  background: linear-gradient(
+    90deg,
+    #ff2a5f,
+    #ff7e40,
+    #ffdb15,
+    #05d550,
+    #00b2fe,
+    #7a00ff,
+    #ff2a5f
+  );
+  background-size: 600% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: rgb-flow 8s linear infinite;
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.3s ease;
+}
+
+/* Stagger start position for smooth wave flow across characters */
+.logo-container .logo-g1 { animation-delay: 0s; }
+.logo-container .logo-o1 { animation-delay: -1.33s; }
+.logo-container .logo-o2 { animation-delay: -2.66s; }
+.logo-container .logo-g2 { animation-delay: -4s; }
+.logo-container .logo-l  { animation-delay: -5.33s; }
+.logo-container .logo-e  { animation-delay: -6.66s; }
+
+@keyframes rgb-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 600% 50%;
+  }
+}
+
+/* Modern hover effects */
+.logo-container span:hover {
+  transform: translateY(-8px) scale(1.08);
+  filter: drop-shadow(0 8px 16px rgba(var(--text-primary), 0.15));
+}
 
 /* Custom search style branding logo */
 [data-theme="dark"] .logo-container {
-  filter: drop-shadow(0 0 25px rgba(138,180,248,0.15));
+  filter: drop-shadow(0 4px 25px rgba(255,255,255,0.06));
 }
 
 /* Custom Search Box Pill */
@@ -741,4 +779,8 @@ footer {
   .results-search-wrapper {
     width: 100%;
   }
+}
+
+.upside-down {
+  transform: rotate(180deg);
 }
